@@ -3,12 +3,10 @@
     padding: 0;
     border: 1px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 #row {
-    width: 30px;
-    height: 30px;
     flex-direction: row;
 }
 

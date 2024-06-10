@@ -1,25 +1,30 @@
 let container = document.querySelector(".container");
-let input = document.querySelector(".input");
-let submit = document.querySelector(".submit")
+let userInput = document.querySelector(".input").value;
+let userClick = document.querySelector(".gridButton");
 
-let rows = 16;
+let row = document.createElement("div");
+row.setAttribute("id", "row");
+let column = document.createElement("div");
+column.setAttribute("id", "column");
 let columns = 16;
 
 
+    for (i = 0; i < columns; i++) {
 
-for (i = 0; i < rows; i++) {
+        let row = document.createElement("div");
 
-    let row = document.createElement("div");
-    row.setAttribute("id", "row");
-    container.appendChild(row)
+        container.appendChild(row)
 
 
-    for ( j = 0; j < columns; j++) {
-        let column = document.createElement("div");
-        column.setAttribute("id", "column");
-        row.appendChild(column);
+        for ( j = 0; j < columns; j++) {
+            let column = document.createElement("div");
+            column.setAttribute("id", "column");
+            row.appendChild(column);
+
+        }
 
     }
 
-}
+const singleSquare = document.querySelectorAll("#column")
 
+const squares = Array.from(singleSquare)
