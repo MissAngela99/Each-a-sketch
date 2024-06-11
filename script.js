@@ -25,31 +25,35 @@ let columns = 16;
 
     }
 button.addEventListener("click", () => {
+    if (input.value <= 100) {
+        columns = input.value;
+        container.textContent = '';
 
-    columns = input.value;
-    container.textContent = '';
+        for (i = 0; i < columns; i++) {
 
-    for (i = 0; i < columns; i++) {
-
-        let row = document.createElement("div");
-        container.appendChild(row)
+            let row = document.createElement("div");
+            container.appendChild(row)
 
 
-        for ( j = 0; j < columns; j++) {
-            let column = document.createElement("div");
-            column.setAttribute("class", "column");
-            row.appendChild(column);
+            for ( j = 0; j < columns; j++) {
+                let column = document.createElement("div");
+                column.setAttribute("class", "column");
+                row.appendChild(column);
+
+            }
 
         }
 
-    }
-
-    const square = document.querySelectorAll(".column");
-    square.forEach((column) => {
-        column.addEventListener("mouseenter", () =>{
-            column.style.backgroundColor = 'black'
-    })
-})
+        const square = document.querySelectorAll(".column");
+        square.forEach((column) => {
+            column.addEventListener("mouseenter", () =>{
+                column.style.backgroundColor = 'black'
+            });
+        });
+    } else if (input.value > 100) {
+        columns = 0
+        alert("Too high!");
+    };
 });
 
 
@@ -57,5 +61,5 @@ const square = document.querySelectorAll(".column");
 square.forEach((column) => {
     column.addEventListener("mouseenter", () =>{
         column.style.backgroundColor = 'black'
-    })
-})
+    });
+});
