@@ -1,1 +1,1 @@
-# Each-a-sketch
+# Etch-a-sketch
