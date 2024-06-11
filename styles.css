@@ -1,11 +1,12 @@
 
 .container {
+    width: 600px;
+    height: 600px;
     margin: 0;
     padding: 0;
     border: 1px;
     display: flex;
     flex-wrap: nowrap;
-    border:1px solid red;
 }
 
 #row {
@@ -13,8 +14,8 @@
 }
 
 .column {
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
     border: 1px solid black;
     background-color: white;
     flex-direction: row;
