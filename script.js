@@ -46,9 +46,12 @@ button.addEventListener("click", () => {
 
         const square = document.querySelectorAll(".column");
         square.forEach((column) => {
-            column.addEventListener("mouseenter", () =>{
-                column.style.backgroundColor = 'black'
-            });
+        column.addEventListener("mouseenter", () =>{
+            let columnShadow = +column.style.opacity || 0;
+            column.style.backgroundColor = 'black';
+            column.style.opacity = Math.min(columnShadow + 0.1, 1);
+            column.style.border = '';
+        });
         });
     } else if (input.value > 100) {
         columns = 0
@@ -56,10 +59,12 @@ button.addEventListener("click", () => {
     };
 });
 
-
 const square = document.querySelectorAll(".column");
 square.forEach((column) => {
-    column.addEventListener("mouseenter", () =>{
-        column.style.backgroundColor = 'black'
-    });
+        column.addEventListener("mouseenter", () =>{
+            let columnShadow = +column.style.opacity || 0;
+            column.style.backgroundColor = 'black';
+            column.style.opacity = Math.min(columnShadow + 0.1, 1);
+            column.style.border = '';
+        });
 });
