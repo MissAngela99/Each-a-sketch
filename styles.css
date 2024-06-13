@@ -1,6 +1,7 @@
 
 .container {
-    width: max-content;
+    width: 600px;
+    height: 600px;
     margin: 0;
     padding: 0;
     border: 1px;
@@ -11,11 +12,6 @@
 
 #row {
     flex-direction: row;
-}
-
-.column {
-    width: 20px;
-    height: 20px;
 }
 
 input {
